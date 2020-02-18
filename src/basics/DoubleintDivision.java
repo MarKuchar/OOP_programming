@@ -1,3 +1,5 @@
+package basics;
+
 public class DoubleintDivision {
     public static void main(String[] args) {
         double x = 10;
