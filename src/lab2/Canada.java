@@ -24,7 +24,7 @@ public class Canada {
     }
     public int getNumberOffProvincesBetween(int min, int max) {
         int sum = 0;
-        for (Province province : province) {
+        for (Province province: province) {
             if (province.getPopulation() >= (min * 1_000_000) && province.getPopulation() <= (max * 1_000_000)) {
                 sum += 1;
             }
