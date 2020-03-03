@@ -29,4 +29,5 @@ public class Designer extends Employee {
                 "hasUXSkills=" + hasUXSkills +
                 '}';
     }
+
 }
