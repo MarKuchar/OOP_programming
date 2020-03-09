@@ -49,11 +49,10 @@ class Rectangle {
     public void draw() {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                System.out.print(color.charAt(0));
+                System.out.println(color.charAt(0));
             }
-            System.out.print("\n");
+            System.out.println("\n");
         }
     }
-
 }
 

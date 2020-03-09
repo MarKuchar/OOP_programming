@@ -27,22 +27,24 @@ public class SeatingChart {
      *               any empty seats (represented by {@code null}.
      *             - {@code studentList} is unchanged.
      */
+
+
     public SeatingChart(List<Student> studentList, int rows, int cols) {
-        Student[][] seatingChart = new Student[rows][cols];
         int s = 0;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 if (s < studentList.size()) {
-                    seatingChart[i][j] = studentList.get(s);
+                    seats[i][j] = studentList.get(s);
                     s += 1;
                 }
                 else {
-                    seatingChart[i][j] = null;
+                    seats[i][j] = null;
                 }
             }
 
         }
     }
+
     /**
      * Removes students who have more than a given number of absences from the seating chart,
      * replacing those entries in the seating chart with {@code null} and returns the number of
@@ -56,9 +58,16 @@ public class SeatingChart {
      *     {@code seats}.
      *   - No student in {@code seats} has more than {@code allowedAbsences} absences.
      *   - Entries without students contain {@code null}.
+     *
      */
     public int removeAbsentStudents(int allowedAbsences) {
-        // TODO: your code goes here.
+        for (int i = 0; i < seats.length; i++) {
+            for (int j = 0; j < seats[j].length; j++) {
+                if (seats[i][j].getAbsenceCount() > allowedAbsences && seats[i][j] != null) {
+                    seats[i][j] = null;
+                }
+            }
+        }
 
         return 0;
     }
@@ -75,3 +84,5 @@ public class SeatingChart {
         return result;
     }
 }
+
+
