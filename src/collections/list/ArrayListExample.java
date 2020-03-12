@@ -7,6 +7,7 @@ public class ArrayListExample {
         // * creating an Empty ArrayList of Strings
         // <Type> : generic
         ArrayList<String> countries = new ArrayList<>();
+        ArrayList<String> countries2 = new ArrayList<>();
 
         // 1. add(obj): add the obj at the end of the list
         countries.add("Taiwan");
@@ -14,9 +15,12 @@ public class ArrayListExample {
         countries.add("Canada");
         countries.add("USA");
         countries.add("Japan");
-        countries.add("Brazil");
+        countries.add("France");
         countries.add("Mexico");
         countries.add("Colombia");
+        countries.add("France");
+        countries2.add("France");
+        countries2.add("Spain");
 
         // 2. print the array list
         System.out.println(countries);
@@ -28,14 +32,14 @@ public class ArrayListExample {
         countries.add(0, "France");
 
         // 5. get(i) : get the obj at index i
-        System.out.println(countries.get(2));
+        System.out.println(countries);
 
         // 6. set(i, newObj) : set the obj at i to newObj
-        countries.set(0, "China");
+        countries.set(1, "China");
         System.out.println(countries);
 
         // 7. remove(obj) : remove the obj from the list
-        countries.remove("Greece");
+        countries.remove("France");
         System.out.println(countries);
 
         // 8. remove(i) : remove obj at index i
@@ -44,7 +48,9 @@ public class ArrayListExample {
         System.out.println(countries.contains("Canada"));
 
         // 10. clear() : clears the list. (remove all objects)
-        countries.clear();
         System.out.println(countries);
+        countries.removeAll(countries2);
+        System.out.println(countries);
+        System.out.println(countries.indexOf("da"));
     }
 }
