@@ -1,7 +1,7 @@
 package collections.list;
 
 
-public class TestClass {
+public class TestMyArrayList {
     public static void main(String[] args) {
         MyArrayList<String> countries = new MyArrayList<String>();
         MyArrayList<String> countries2 = new MyArrayList<String>();
@@ -33,11 +33,11 @@ public class TestClass {
         // System.out.println(countries.remove(8));
         countries.add(10, "Egypt");
         System.out.println(countries.remove(2));
-        System.out.println();
-        System.out.println(countries.lastIndexOf("USA"));
         System.out.println(countries);
-        // countries.clear();
-        // System.out.println(countries);
+        System.out.println(countries.indexOf("France"));
+        System.out.println(countries.lastIndexOf("USA"));
+        countries.clear();
+        System.out.println(countries);
     }
 
 }

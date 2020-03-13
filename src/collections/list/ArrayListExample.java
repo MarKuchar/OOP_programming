@@ -1,6 +1,7 @@
 package collections.list;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ArrayListExample {
     public static void main(String[] args) {
@@ -52,5 +53,10 @@ public class ArrayListExample {
         countries.removeAll(countries2);
         System.out.println(countries);
         System.out.println(countries.indexOf("da"));
+
+        String[] newArr = {"USA", "Taiwan", "USA", "Taiwan", "USA", "Taiwan", "USA", "Taiwan", "USA"};
+        System.out.println(Arrays.toString(countries.toArray(newArr)));
+        System.out.println(Arrays.toString(newArr));
+        System.out.println(countries);
     }
 }

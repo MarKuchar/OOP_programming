@@ -56,8 +56,12 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public <T> T[] toArray(T[] a) {
-
-        return null;
+        if (a.length < size)
+            return (T[]) Arrays.copyOf(elementData, size, a.getClass());
+        System.arraycopy(elementData, 0, a, 0, size);
+        if (a.length > size)
+            a[size] = null;
+        return a;
     }
 
     @Override
@@ -173,6 +177,7 @@ public class MyArrayList<E> implements List<E> {
     @Override
     public void clear() {
         elementData = new Object[DEFAULT_CAPACITY];
+        size = 0;
     }
 
     @Override
@@ -190,12 +195,11 @@ public class MyArrayList<E> implements List<E> {
         }
         E oldValue = (E) elementData[index];
         elementData[index] = element;
-        return oldValue;  // Why are we returning an old value?
+        return oldValue;
     }
 
     @Override
     public void add(int index, E element) {
-        // Will add try-catch exception
         try {
         if (elementData.length == size) {
             elementData = grow(size + 1);
@@ -225,7 +229,7 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public int indexOf(Object o) {
-        for (int i = 0; i < elementData.length; i++) {
+        for (int i = 0; i < size; i++) {
             if (elementData[i] == o) {
                 return i;
             }
@@ -235,7 +239,7 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public int lastIndexOf(Object o) {
-        for (int i = elementData.length - 1; i > 0; i--) {
+        for (int i = size - 1; i > 0; i--) {
             if (elementData[i] == o) {
                 return i;
             }
@@ -263,13 +267,13 @@ public class MyArrayList<E> implements List<E> {
         StringBuilder newStringOutcome = new StringBuilder( "[" );
         for (int i = 0; i < size; i++) {
             if (i == size - 1) {
-                newStringOutcome.append(elementData[i] + "]");
+                newStringOutcome.append(elementData[i]);
                 break;
             }
             newStringOutcome.append(elementData[i] + ", ");
         }
         return "MyArrayList{" + newStringOutcome +
-                ", size=" + size +
+                "], size=" + size +
                 '}';
     }
 }
