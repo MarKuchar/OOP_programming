@@ -105,7 +105,7 @@ public class MySLinkedList<E> {
         msll1.add("Paris");
         msll1.add("Roma");
         msll1.add("Moscow");
-        System.out.println(msll1.remove(1));
+        System.out.println(msll1.set(1, "Madrid"));
         System.out.println(msll1);
     }
 }
