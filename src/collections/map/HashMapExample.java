@@ -37,5 +37,7 @@ public class HashMapExample {
         for(String value: acronyms.values()) {
             System.out.println(value);
         }
+        String text = "1122";
+        System.out.println(Integer.parseInt(text.substring(0, 2)));
     }
 }

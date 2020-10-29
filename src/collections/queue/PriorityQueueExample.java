@@ -21,15 +21,15 @@ public class PriorityQueueExample {
         pq.offer("ArnoldC");
 
         // 1. iterate elements in the queue (by priority)
-//        while (!pq.isEmpty()) {
-//            System.out.println(pq.poll());
-//        }
+       while (!pq.isEmpty()) {
+            System.out.println(pq.poll());
+        }
 
         // 2. toArray -> Binary heap order
-//        Object[] arr = pq.toArray(); // "Binary Heap Order"
-//        for (Object lang: arr) {
-//            System.out.println(lang);
-//        }
+        Object[] arr = pq.toArray(); // "Binary Heap Order"
+        for (Object lang : arr) {
+            System.out.println(lang);
+        }
 
         // 3. Iterator: "Binary heap order"
         Iterator<String> cursor = pq.iterator();
@@ -37,11 +37,11 @@ public class PriorityQueueExample {
             System.out.println(cursor.next());
         }
 
-        Student aga = new Student("Agamenon", (int) (Math.random() * 100));
-        Student carlos = new Student("Carlos", (int) (Math.random() * 100));
-        Student cayo = new Student("Cayo", (int) (Math.random() * 100));
-        Student ivan = new Student("Ivan", (int) (Math.random() * 100));
-        Student hermilo = new Student("Hermilo", (int) (Math.random() * 100));
+        Student aga = new Student("Agamenon", (int) 70);
+        Student carlos = new Student("Carlos", (int) 70);
+        Student cayo = new Student("Cayo", (int) 90);
+        Student ivan = new Student("Ivan", (int) 65);
+        Student hermilo = new Student("Hermilo", 80);
 
         PriorityQueue<Student> students = new PriorityQueue<>();
         students.add(aga);
@@ -53,6 +53,5 @@ public class PriorityQueueExample {
         while (!students.isEmpty()) {
             System.out.println(students.poll());
         }
-
     }
 }

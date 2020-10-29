@@ -8,7 +8,9 @@ public class Driver {
         BankAccount ac2 = new BankAccount("131212", 123);
         System.out.println(ac1 == ac2);
         System.out.println(ac1.equals(ac2));
-
+        CheckingAccount d = new CheckingAccount("312",321,321,21);
+        d.getAccountNumber();
+        d.move(321);
 //        System.out.println(ac1);
 //        CheckingAccount acc1 = new CheckingAccount("12421", 1000,123, 1000);
 //        CheckingAccount acc2 = new CheckingAccount("12312",10000,123, 2000);

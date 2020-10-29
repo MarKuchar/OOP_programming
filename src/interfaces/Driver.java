@@ -6,15 +6,18 @@ public class Driver {
         House h1 = new House(15);
         Caravan cr1 = new Caravan(2, 0);
 
-        Movable[] movables = {c1, cr1};
-        for (Movable m : movables) {
+        //Movable[] movables = {c1, cr1};
+        //for (Movable m : movables) {
             // polymorphism
-            m.move(10);
-        }
+          //  m.move(10);
+        //}
         // compile-time vs run-time
         // down-casting
-        Caravan castedCr = ((Caravan) movables[1]);
-        castedCr.canFit(5);
+        //Caravan castedCr = ((Caravan) movables[1]);
+        //castedCr.canFit(5);
+        Movable a = new Caravan(2);
+
+
 
         // Note:
         // down-casting to a 'wrong' type

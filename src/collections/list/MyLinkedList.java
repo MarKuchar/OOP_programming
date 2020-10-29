@@ -163,8 +163,8 @@ public class MyLinkedList<E> {
         // System.out.println(mll1.contains("Moscow"));
         // System.out.println(ll1);
         // ll1.add(1, "Budapest");
-        mll1.add(0, "Budapest");
         System.out.println(mll1);
+        mll1.add(0, "Budapest");
         System.out.println(mll1.remove(4));
         System.out.println(mll1);
         System.out.println(mll1.get(0));

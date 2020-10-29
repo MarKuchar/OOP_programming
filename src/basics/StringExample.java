@@ -52,5 +52,8 @@ public class StringExample {
             System.out.print(ch);
         }
         // if you want to identify chars, you can use different functions
+
+
+        
     }
 }

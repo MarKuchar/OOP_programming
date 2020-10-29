@@ -1,12 +1,15 @@
 package inheritance;
 
+import interfaces.Movable;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.util.Objects;
 
 // Every class inherits from Object class
 // Object class (11 methods)
 // - equals() method : defines what's equal for the object
 // - toString() method : returns the string representation of object
-public class BankAccount {
+public class BankAccount implements Movable {
     private String accountNumber;
     private double balance;
     protected int bankCode;
@@ -64,5 +67,15 @@ public class BankAccount {
         // compare fields
         BankAccount other = (BankAccount) o;
         return this.accountNumber.equals(other.accountNumber);
+    }
+
+    @Override
+    public void move(int distance) {
+
+    }
+
+    @Override
+    public boolean canMove() {
+        return false;
     }
 }

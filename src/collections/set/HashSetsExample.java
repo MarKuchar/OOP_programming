@@ -1,5 +1,6 @@
 package collections.set;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class HashSetsExample {
@@ -21,7 +22,21 @@ public class HashSetsExample {
         }
     }
 
+    //public void print(HashMap<String, String> country) {}
+
     public static void main(String[] args) {
+        HashMap<String, String> countries = new HashMap<>();
+        countries.put("B.C", "Victoria");
+        countries.put("Al", "Edmonton");
+        countries.put("Ot", "Toronto");
+
+        for (String country : countries.values()) {
+            System.out.println(country);
+        }
+        for (String key : countries.keySet()) {
+            System.out.println(countries.get(key));
+        }
+
         HashSetsExample test = new HashSetsExample();
         System.out.println(test.distinct(1900));
 
@@ -64,5 +79,6 @@ public class HashSetsExample {
             if (food.contains("Sushi")) { // O(1)
             System.out.println(true);
         }
+
     }
 }
